@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Nomicon - AI Legal Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <h1>Legal Nomicon</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#security">Security</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="index.html#pricing" class="btn secondary pricing-nav-btn">View Plans</a>
+                    <a href="index.html#contact" class="btn primary schedule-btn">Schedule Demo</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chat-container">
+        <!-- Left Sidebar -->
+        <div class="chat-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i class="fas fa-book-open"></i>
+                    <h2>Legal Nomicon</h2>
+                </div>
+                <p class="sidebar-tagline">AI Legal Assistant</p>
+            </div>
+            
+            <div class="sidebar-content">
+                <button class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                    New Conversation
+                </button>
+                
+                <div class="demo-conversations">
+                    <div class="demo-item active">
+                        <p class="demo-title">🔍 Legal Research Demo</p>
+                        <p class="demo-subtitle">Case law search</p>
+                    </div>
+                    <div class="demo-item">
+                        <p class="demo-title">📄 Contract Analysis</p>
+                        <p class="demo-subtitle">Clause extraction</p>
+                    </div>
+                    <div class="demo-item">
+                        <p class="demo-title">📝 Document Generation</p>
+                        <p class="demo-subtitle">Template creation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Legal Professional</span>
+                    <span class="user-role">Premium Plan</span>
+                </div>
+                <div class="user-actions">
+                    <button class="user-action-btn">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="user-action-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Chat Area -->
+        <div class="chat-main">
+            <div class="chat-header">
+                <div>
+                    <h2>Legal AI Assistant</h2>
+                    <p>Ask questions about law, contracts, and legal research</p>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- AI Welcome Message -->
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>👋 <strong>Welcome to Legal Nomicon AI!</strong></p>
+                        <p>I can help you with:</p>
+                        <p>• Legal research and case law analysis<br>
+                        • Contract review and clause extraction<br>
+                        • Document drafting and template creation<br>
+                        • Regulatory compliance questions</p>
+                        <p>How can I assist with your legal work today?</p>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+                
+                <!-- Typing Indicator (initially hidden) -->
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="typing-bubbles">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="legal-disclaimer">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Legal Nomicon provides general guidance only. Always verify important information with qualified legal professionals.</span>
+                </div>
+                <div class="chat-input-area">
+                    <textarea id="chat-input" class="chat-input" placeholder="Ask a legal question or describe your legal issue..."></textarea>
+                    <button id="chat-send-btn" class="chat-send-btn" disabled>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-book-open"></i>
+                    <h2>Legal Nomicon</h2>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#pricing">Pricing</a></li>
+                            <li><a href="index.html#security">Security</a></li>
+                            <li><a href="#">Integrations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="index.html">Resources</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="index.html">Articles</a></li>
+                            <li><a href="index.html">Guides</a></li>
+                            <li><a href="index.html">Case Studies</a></li>
+                            <li><a href="index.html">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Legal Nomicon. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
